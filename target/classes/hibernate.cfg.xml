@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Related to the connection START -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+  <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+  <property name="hibernate.connection.username">postgres</property>
+  <property name="hibernate.connection.password">vasu8341</property>
+  
+
+
+		<!-- Related to hibernate properties START -->
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		 <property name="hbm2ddl.auto">create</property> 
+		
+		<!-- Related to hibernate properties END -->
+
+
+		<!-- Related to mapping START -->
+		<mapping resource="book.hbm.xml" />
+		
+		
+		<!-- Related to the mapping END -->
+
+	</session-factory>
+	</hibernate-configuration>
